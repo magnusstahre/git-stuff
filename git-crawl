@@ -1,6 +1,6 @@
 #!/bin/sh
 USAGE="<commit-ish>"
-. git-sh-setup
+. "$(git --exec-path)/git-sh-setup"
 test -n "$*" || usage
 
 next_commit=$(git rev-list --reverse HEAD..$1 | head -1)
